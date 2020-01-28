@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    {% for data in Porto %}
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <img src="{{ data.images.url }}" class="margin-bottom" width="340px" height="240px">
+            <p class="bold-font">{{ data.judul }}</p>
+            <p class="money-color">Rp {{ data.harga }}</p>
+            <p>{{ data.deskripsi }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block base %}
+<div class="container">
+    <div class="section-row">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 border-gbr">
+                <img src="{% static 'img/iphone.jpg' %}" class="margin-bottom" width="340px" height="240px">
+                <p class="bold-font">Iphone X</p>
+                <p>Rp 15.000.000</p>
+                <a href="{% url 'form' %}">Lihat Details</a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 border-gbr">
+                <img src="{% static 'img/sepatu.jpg' %}" class="margin-bottom" width="340px" height="240px">
+                <p class="bold-font">Sepatu Vans</p>
+                <p>Rp 799.000</p>
+                <a href="{% url 'form' %}">Lihat Details</a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 border-gbr">
+                <img src="{% static 'img/motor.jpg' %}" class="margin-bottom" width="340px" height="240px">
+                <p class="bold-font">Motor</p>
+                <p>Rp 35.000.000</p>
+                <a href="{% url 'form' %}">Lihat Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block form %}
+<h2>New Post</h2>
+<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="Submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,132 @@
+.center {
+    padding: 20px;
+}
+
+#mentor-mentee {
+    padding-bottom: 0px;
+} 
+
+.header-ukuran {
+    height: 80px;
+}
+
+.head-color {
+    background-color: rgb(57, 199, 180);
+    color: antiquewhite;
+}
+
+.toko-color {
+    background-color: rgb(40, 153, 138);
+    color: antiquewhite;
+}
+
+.header-font {
+    font-size: 21px;
+}
+
+.foot-color {
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
+}
+
+.black-font {
+    color: black;
+    font-size: 20px;
+}
+
+.blue-font {
+    color: blue;
+}
+
+.title-light {
+    color: gray;
+}
+
+.bold-font {
+    font-weight:bold;
+}
+
+.money-color {
+    color: rgb(23, 184, 23);
+}
+
+.margin-side {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.margin-header {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.section-row {
+    padding: 30px;
+}
+
+.section-row .img-event {
+    margin-bottom: 30px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.padding-bot {
+    padding-bottom: 20px;
+}
+
+.padding-top {
+    padding-top: 25px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.border-gbr {
+    border: 1px solid black;
+}
+
+.box-icon {
+    max-width: 235px;
+    width: 100%;
+    height: 178px;
+    display: table;
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 1px solid #EBEBEB;
+}
+
+.box-icon .box-middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.box-icon .box-middle .learn-img {
+    height: 73px;
+    display: table;
+    margin: 0 auto;
+}
+
+.box-icon .box-middle .learn-img .learn-img-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.box-icon .box-middle .learn-title>h5 {
+    font-size: 12px;
+    color: #7c7c7c;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
