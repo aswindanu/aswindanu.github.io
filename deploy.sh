@@ -1,0 +1,1 @@
+surge --project /Users/aswindanu/Documents/Pribadi/CV/PORTO/porto/ --domain aswindanu.com
