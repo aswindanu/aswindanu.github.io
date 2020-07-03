@@ -29,35 +29,7 @@
     <link rel="stylesheet" href="assets/css/icomoon.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Tracking -->
-    <script type="text/javascript">
-      (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
-      ;r.type="text/javascript"
-      ;r.integrity="sha384-vYYnQ3LPdp/RkQjoKBTGSq0X5F73gXU3G2QopHaIfna0Ct1JRWzwrmEz115NzOta"
-      ;r.crossOrigin="anonymous";r.async=true
-      ;r.src="https://cdn.amplitude.com/libs/amplitude-5.8.0-min.gz.js"
-      ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
-      console.log("[Amplitude] Error: could not load SDK")}}
-      ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
-      ;function s(e,t){e.prototype[t]=function(){
-      this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
-      var o=function(){this._q=[];return this}
-      ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
-      ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
-      ;return this}
-      ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
-      ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
-      ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
-      ;function v(e){function t(t){e[t]=function(){
-      e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
-      for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
-      e=(!e||e.length===0?"$default_instance":e).toLowerCase()
-      ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
-      ;e.amplitude=n})(window,document);
-    
-      amplitude.getInstance().init("cdec7c6681c43317694ecb94eb8eed40");
-    </script>
-    <!-- End Track -->
+    <script src="assets/js/track.js"></script>
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -393,8 +365,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Blog</span>
-            <h2 class="mb-4">My Blog</h2>
+            <h2>Blog</h2>
             <p>
               I believe I will write my blog someday. To Be Discovery.
             </p>
@@ -410,8 +381,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Contact</span>
-            <h2 class="mb-4">Contact Me</h2>
+            <h2>Contact</h2>
             <p>
               Send me a message. I'll call you back, yes
             </p>
@@ -518,7 +488,6 @@
                     ><span class="icon-long-arrow-right mr-2"></span>Home</a
                   >
                 </li>
-                <li class="nav-item"></li>
                 <li class="nav-item">
                   <a href="#skills-section" class="nav-link"
                     ><span class="icon-long-arrow-right mr-2"></span>Skills</a
@@ -613,6 +582,7 @@
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
               <script>
+                amplitude.getInstance().logEvent('PORTOFOLIO');
                 document.write(new Date().getFullYear());
               </script>
               All rights reserved | This template is made with
@@ -663,17 +633,6 @@
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/jquery.animateNumber.min.js"></script>
     <script src="assets/js/scrollax.min.js"></script>
-
-    <script type="application/javascript">
-      amplitude.getInstance().logEvent('PORTOFOLIO');
-
-      function get_email () {
-        let user_email = document.getElementById("email-id").value;
-        amplitude.getInstance().setUserId(user_email);
-        amplitude.getInstance().logEvent('PORTOFOLIO');
-      };
-    </script>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>
