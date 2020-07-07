@@ -7697,7 +7697,7 @@ h1, h2, h3, h4, h5,
   overflow: visible; }
 
 .progress-bar {
-  background: #444950;
+  background: #4c6f9e;
   box-shadow: none;
   font-size: 12px;
   line-height: 1.2;
@@ -7716,7 +7716,7 @@ h1, h2, h3, h4, h5,
     width: 34px;
     height: 34px;
     content: '';
-    background: #444950;
+    background: #4c6f9e;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -8387,6 +8387,20 @@ textarea.form-control {
   stroke-dashoffset: 0;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+#skills-section {
+  color: #b4cbea;
+  background-image: url(../images/image_3.jpg) !important;
+  background-color: #4b555f !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-blend-mode: multiply;
+}
+
+#skills-section p, #skills-section h2,
+#skills-section h3, #skills-section span {
+  color: #b4cbea;
+}
 
 @keyframes loader-rotate {
   100% {
