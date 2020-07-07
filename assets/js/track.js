@@ -11,7 +11,8 @@ let getLoc = $.ajax(
     {
         type: 'GET',
         dataType: 'json',
-        url: 'http://ip-api.com/json',
+        // url: 'http://ip-api.com/json',
+        url: 'https://ipinfo.io/json',
         async: false,
     }
 )
