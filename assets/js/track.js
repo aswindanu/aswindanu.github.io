@@ -1,48 +1,34 @@
-(function (e, t) {
-    var n = e.amplitude || { _q: [], _iq: {} }; var r = t.createElement("script")
-        ; r.type = "text/javascript"
-        ; r.integrity = "sha384-vYYnQ3LPdp/RkQjoKBTGSq0X5F73gXU3G2QopHaIfna0Ct1JRWzwrmEz115NzOta"
-        ; r.crossOrigin = "anonymous"; r.async = true
-        ; r.src = "https://cdn.amplitude.com/libs/amplitude-5.8.0-min.gz.js"
-        ; r.onload = function () {
-            if (!e.amplitude.runQueuedFunctions) {
-                console.log("[Amplitude] Error: could not load SDK")
-            }
-        }
-        ; var i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i)
-        ; function s(e, t) {
-        e.prototype[t] = function () {
-            this._q.push([t].concat(Array.prototype.slice.call(arguments, 0))); return this
-        }
-        }
-    var o = function () { this._q = []; return this }
-        ; var a = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset"]
-        ; for (var u = 0; u < a.length; u++) { s(o, a[u]) } n.Identify = o; var c = function () {
-        this._q = []
-            ; return this
-        }
-        ; var l = ["setProductId", "setQuantity", "setPrice", "setRevenueType", "setEventProperties"]
-        ; for (var p = 0; p < l.length; p++) { s(c, l[p]) } n.Revenue = c
-        ; var d = ["init", "logEvent", "logRevenue", "setUserId", "setUserProperties", "setOptOut", "setVersionName", "setDomain", "setDeviceId", "enableTracking", "setGlobalUserProperties", "identify", "clearUserProperties", "setGroup", "logRevenueV2", "regenerateDeviceId", "groupIdentify", "onInit", "logEventWithTimestamp", "logEventWithGroups", "setSessionId", "resetSessionId"]
-        ; function v(e) {
-            function t(t) {
-            e[t] = function () {
-                e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)))
-            }
-            }
-            for (var n = 0; n < d.length; n++) { t(d[n]) }
-        } v(n); n.getInstance = function (e) {
-            e = (!e || e.length === 0 ? "$default_instance" : e).toLowerCase()
-                ; if (!n._iq.hasOwnProperty(e)) { n._iq[e] = { _q: [] }; v(n._iq[e]) } return n._iq[e]
-        }
-        ; e.amplitude = n
-})(window, document);
+let getData = $.ajax(
+    {
+        type: "GET",
+        url: 'https://www.cloudflare.com/cdn-cgi/trace',
+        async: false
+    }
+).responseText;
 
-amplitude.getInstance().init("cdec7c6681c43317694ecb94eb8eed40");
+let variables;
+let getLoc = $.ajax(
+    {
+        type: 'GET',
+        dataType: 'json',
+        url: 'http://ip-api.com/json',
+        async: false,
+    }
+)
+getLoc = Object.values(getLoc)[16]
 
 function getEmail() {
     let user_email = document.getElementById("email-id").value;
     amplitude.getInstance().setUserId(user_email);
-    amplitude.getInstance().logEvent('PORTOFOLIO');
+    amplitude.getInstance().logEvent(
+        `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
+    );
+
     window.location.href = "mailto:aswindanu.prihastomo@gmail.com";
 };
+
+amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
+amplitude.getInstance().logEvent(
+    `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
+);
+document.write(new Date().getFullYear());
