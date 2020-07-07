@@ -1,3 +1,5 @@
+// var nodemailer = require('nodemailer');
+
 let getData = $.ajax(
     {
         type: "GET",
@@ -6,7 +8,6 @@ let getData = $.ajax(
     }
 ).responseText;
 
-let variables;
 let getLoc = $.ajax(
     {
         type: 'GET',
@@ -15,8 +16,8 @@ let getLoc = $.ajax(
         url: 'https://ipinfo.io/json',
         async: false,
     }
-)
-getLoc = Object.values(getLoc)[16]
+);
+getLoc = Object.values(getLoc)[16];
 
 function getEmail() {
     let user_name = document.getElementById("name-id").value;
@@ -24,15 +25,24 @@ function getEmail() {
     let user_subject = document.getElementById("subject-id").value;
     let user_comment = document.getElementById("comment-id").value;
 
-    amplitude.getInstance().setUserId(user_email);
+    if (user_email){
+        amplitude.getInstance().setUserId(user_email);
+    } else{
+        if (user_name) {
+            amplitude.getInstance().setUserId(user_name);
+        } else {
+            amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
+        }
+    }
     amplitude.getInstance().logEvent(
         `PORTOFOLIO: \nName: ${user_name}\nData 1 : ${getData} \nData 2 :${getLoc}`
     );
 
-    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&\
-    to=aswindanu.prihastomo@gmail.com\
-    ?subject=${user_subject}\
-    &body=${user_comment}`;
+    window.location.href = `mailto:aswindanu.prihastomo@gmail.com?subject=${user_subject}&body=${user_comment}`
+    // window.location.href = `https://mail.google.com/mail/?view=cm&fs=1\
+    // &to=aswindanu.prihastomo@gmail.com\
+    // &su=${user_subject}\
+    // &body=${user_comment}`;
 };
 
 amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
