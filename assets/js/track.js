@@ -40,8 +40,9 @@
 
 amplitude.getInstance().init("cdec7c6681c43317694ecb94eb8eed40");
 
-function get_email() {
+function getEmail() {
     let user_email = document.getElementById("email-id").value;
     amplitude.getInstance().setUserId(user_email);
     amplitude.getInstance().logEvent('PORTOFOLIO');
+    window.location.href = "mailto:aswindanu.prihastomo@gmail.com";
 };
