@@ -7774,7 +7774,7 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     content: '';
     opacity: 0;
-    background: #444950;
+    background: #557a80eb;
     z-index: -1;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -8400,6 +8400,21 @@ textarea.form-control {
 #skills-section p, #skills-section h2,
 #skills-section h3, #skills-section span {
   color: #b4cbea;
+}
+
+#projects-section p, #projects-section h2,
+#projects-section h3, #projects-section span {
+  color: #b3caea;
+}
+
+#projects-section .project span {
+  color: #254246;
+  font-weight: 505;
+}
+
+#projects-section .project a {
+  color: #a8e4cc;
+  font-weight: 500;
 }
 
 @keyframes loader-rotate {
