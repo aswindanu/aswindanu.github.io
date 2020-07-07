@@ -19,13 +19,20 @@ let getLoc = $.ajax(
 getLoc = Object.values(getLoc)[16]
 
 function getEmail() {
+    let user_name = document.getElementById("name-id").value;
     let user_email = document.getElementById("email-id").value;
+    let user_subject = document.getElementById("subject-id").value;
+    let user_comment = document.getElementById("comment-id").value;
+
     amplitude.getInstance().setUserId(user_email);
     amplitude.getInstance().logEvent(
-        `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
+        `PORTOFOLIO: \nName: ${user_name}\nData 1 : ${getData} \nData 2 :${getLoc}`
     );
 
-    window.location.href = "mailto:aswindanu.prihastomo@gmail.com";
+    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&\
+    to=aswindanu.prihastomo@gmail.com\
+    ?subject=${user_subject}\
+    &body=${user_comment}`;
 };
 
 amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
