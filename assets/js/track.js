@@ -45,7 +45,7 @@ function getEmail() {
     // &body=${user_comment}`;
 };
 
-if(!location.hostname.match("")){
+if(!window.location.hostname.match("")){
     amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
     amplitude.getInstance().logEvent(
         `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
