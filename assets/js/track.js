@@ -45,8 +45,12 @@ function getEmail() {
     // &body=${user_comment}`;
 };
 
-amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
-amplitude.getInstance().logEvent(
-    `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
-);
-document.write(new Date().getFullYear());
+if(!location.hostname.match("")){
+    amplitude.getInstance().setUserId(getData.match(/ip=(.*)/i)[0].replace('ip=', ''));
+    amplitude.getInstance().logEvent(
+        `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
+    );
+    document.write(new Date().getFullYear());
+} else {
+    console.log('Hi, buddy!');
+}

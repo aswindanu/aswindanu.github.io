@@ -7864,7 +7864,7 @@ textarea.form-control {
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 3em 0; } }
 
 .ftco-no-pt {
   padding-top: 0 !important; }
@@ -8387,6 +8387,17 @@ textarea.form-control {
   stroke-dashoffset: 0;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+/* Custom */
+#wedding-image{
+  background-image:url(../images/wedding.jpg);
+}
+
+@media (max-width: 767.98px) {
+  #wedding-image{
+    padding: 55% 50%;
+  }
+}
 
 #skills-section {
   color: #b4cbea;
