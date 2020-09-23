@@ -50,7 +50,6 @@ if(!window.location.origin.match("file://" || !window.location.protocol.match("f
     amplitude.getInstance().logEvent(
         `PORTOFOLIO: \nData 1 : ${getData} \nData 2 :${getLoc}`
     );
-    document.write(new Date().getFullYear());
 } else {
     console.log('Hi, buddy!');
 }
