@@ -8428,6 +8428,13 @@ textarea.form-control {
   font-weight: 500;
 }
 
+.percentage-num {
+  text-align: right;
+  color: #b4cae9 !important;
+  font-size: 132%;
+  margin-right: 2%;
+}
+
 @keyframes loader-rotate {
   100% {
     transform: rotate(360deg); } }
