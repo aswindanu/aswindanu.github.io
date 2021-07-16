@@ -8449,3 +8449,17 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* ADDITIONAL */
+#icon-linkedin {
+  height: 50px;
+    width: 10%;
+    padding: 0px 10px;
+    margin: 0px 2px;
+    background: rgb(56 50 50 / 58%);
+    color: currentColor;
+    border-radius: 50%;
+    position: relative;
+    font-size: xx-large;
+}
+/* END */
