@@ -7774,6 +7774,7 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     content: '';
     opacity: 0;
+    border-radius: 5%;
     background: #557a80eb;
     z-index: -1;
     -moz-transition: all 0.3s ease;
@@ -8009,6 +8010,9 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
+
+.img-project {
+  border-radius: 5%; }
 
 .image-popup {
   cursor: -webkit-zoom-in;
@@ -8419,7 +8423,7 @@ textarea.form-control {
 }
 
 #projects-section .project span {
-  color: #1f393c;
+  /* color: #1f393c; */
   font-weight: 505;
 }
 
