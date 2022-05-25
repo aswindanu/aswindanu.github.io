@@ -8466,4 +8466,14 @@ textarea.form-control {
     position: relative;
     font-size: xx-large;
 }
+
+#button-see-more {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: wheat;
+}
 /* END */
