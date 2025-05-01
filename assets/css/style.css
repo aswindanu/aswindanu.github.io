@@ -8392,7 +8392,7 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
 
-/* Custom */
+/* Custom Addon */
 #wedding-image{
   background-image:url(../images/wedding.jpg);
 }
@@ -8455,7 +8455,6 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-/* ADDITIONAL */
 .bg-skillset {
   background-color: #409d67cf !important;
   outline: 1.5px solid #33c771c9;
@@ -8481,5 +8480,11 @@ textarea.form-control {
   overflow: hidden;
   outline: none;
   color: wheat;
+}
+
+@media (max-width: 425px) {
+  .bg-skillset {
+    font-size: small;
+  }
 }
 /* END */
