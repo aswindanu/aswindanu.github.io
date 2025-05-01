@@ -8418,12 +8418,13 @@ textarea.form-control {
 }
 
 #projects-section p, #projects-section h2,
-#projects-section h3, #projects-section span {
+#projects-section h3 {
   color: #b3caea;
 }
 
 #projects-section .project span {
   /* color: #1f393c; */
+  color: #edf4fd;
   font-weight: 505;
 }
 
@@ -8455,6 +8456,10 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 /* ADDITIONAL */
+.bg-skillset {
+  background-color: #429263 !important;
+}
+
 #icon-linkedin {
   height: 50px;
     width: 10%;
