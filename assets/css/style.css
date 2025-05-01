@@ -7785,6 +7785,11 @@ h1, h2, h3, h4, h5,
     @media (max-width: 767.98px) {
       .project .overlay {
         opacity: .2; } }
+    @media (max-width: 425px) {
+      .project .overlay {
+        opacity: .7;
+      }
+    }
   .project .text {
     max-width: 80%;
     z-index: 1;
@@ -8470,6 +8475,10 @@ textarea.form-control {
     border-radius: 50%;
     position: relative;
     font-size: xx-large;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 #button-see-more {
