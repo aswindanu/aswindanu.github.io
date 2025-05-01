@@ -8457,7 +8457,8 @@ textarea.form-control {
 
 /* ADDITIONAL */
 .bg-skillset {
-  background-color: #419b66c9 !important;
+  background-color: #43a26acf !important;
+  outline: 1.5px solid #33c771c9;
 }
 
 #icon-linkedin {
