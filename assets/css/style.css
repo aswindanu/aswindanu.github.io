@@ -8422,10 +8422,41 @@ textarea.form-control {
   color: #b4cbea;
 }
 
-#projects-section p, #projects-section h2,
-#projects-section h3 {
-  color: #b3caea;
+#skills-section #python img,
+#skills-section #golang img,
+#skills-section #javascript img,
+#skills-section #database img,
+#skills-section #web img,
+#skills-section #principle img,
+#skills-section #prompt img,
+#skills-section #devops img,
+#skills-section #utilities img,
+#skills-section #integrations img {
+    width: 6%;
+    height: fit-content;
 }
+
+#skills-section #python h3 { color: #5b97e7 }
+#skills-section #golang h3 { color: #82b1ef }
+#skills-section #javascript h3 { color: #efdd82 }
+#skills-section #database h3 { color: #df82ef }
+#skills-section #web h3 { color: #82efaf }
+#skills-section #principle h3 { color: #cce5d6 }
+#skills-section #prompt h3 { color: #e3b632 }
+#skills-section #devops h3 { color: #cee332 }
+#skills-section #utilities h3 { color: #f949d2 }
+#skills-section #integrations h3 { color: #b1fff1 }
+
+#skills-section #python p { color: #a9b7b5 }
+#skills-section #golang p { color: #a9b7b5 }
+#skills-section #javascript p { color: #a9b7b5 }
+#skills-section #database p { color: #a9b7b5 }
+#skills-section #web p { color: #a9b7b5 }
+#skills-section #principle p { color: #a9b7b5 }
+#skills-section #prompt p { color: #a9b7b5 }
+#skills-section #devops p { color: #a9b7b5 }
+#skills-section #utilities p { color: #a9b7b5 }
+#skills-section #integrations p { color: #a9b7b5 }
 
 #projects-section .project span {
   /* color: #1f393c; */
