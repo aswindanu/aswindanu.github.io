@@ -8422,6 +8422,10 @@ textarea.form-control {
   color: #b4cbea;
 }
 
+.progress-title {
+    display: flex;
+}
+
 #skills-section #python img,
 #skills-section #golang img,
 #skills-section #javascript img,
