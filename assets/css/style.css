@@ -8436,8 +8436,8 @@ textarea.form-control {
 #skills-section #devops img,
 #skills-section #utilities img,
 #skills-section #integrations img {
-    width: 6%;
-    height: fit-content;
+    width: fit-content;
+    height: 20px;
 }
 
 #skills-section #python h3 { color: #5b97e7 }
